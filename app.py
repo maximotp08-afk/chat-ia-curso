@@ -45,7 +45,7 @@ if prompt := st.chat_input("Escribe tu pregunta aquí..."):
         contents.append({"role": role, "parts": [{"text": msg["content"]}]})
 
     # Enlace con el modelo activo (gemini-2.5-flash)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key={api_key}"
     payload = {
         "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": contents
