@@ -44,8 +44,8 @@ if prompt := st.chat_input("Escribe tu pregunta aquí..."):
         role = "user" if msg["role"] == "user" else "model"
         contents.append({"role": role, "parts": [{"text": msg["content"]}]})
 
-    # Petición HTTP directa al endpoint de Google Gemini
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # Enlace con el modelo activo (gemini-2.5-flash)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
     payload = {
         "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
         "contents": contents
