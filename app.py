@@ -25,9 +25,9 @@ SYSTEM_PROMPT = (
     "Rechaza tajantemente responder a contenidos violentos, explícitos, de acoso o inapropiados para menores."
 )
 
-# Inicializar el modelo con las instrucciones
+# Inicializar el modelo con el identificador completo
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash",
+    model_name="models/gemini-1.5-flash",
     system_instruction=SYSTEM_PROMPT
 )
 
