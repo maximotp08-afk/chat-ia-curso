@@ -66,7 +66,7 @@ with tab_chat:
                     })
                 contents.append({"role": role, "parts": parts})
 
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key={api_key}"
             payload = {
                 "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
                 "contents": contents
